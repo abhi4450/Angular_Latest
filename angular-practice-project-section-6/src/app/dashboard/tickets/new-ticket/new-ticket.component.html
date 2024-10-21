@@ -1,0 +1,30 @@
+<form (ngSubmit)="onSubmit()" #form>
+  <app-control label="Title">
+    <input name="title" id="title"  [(ngModel)] = "enteredTitle" />
+    <!-- #titleInput (template variable) , now this variable available anywhere in template-->
+  </app-control>
+  <app-control label="Request">
+    <textarea name="request" id="request" rows="3"   [(ngModel)]="enteredText"></textarea>
+  </app-control>
+  <p>
+    <button appButton #btn> <!--when add attribute appButton , angular turns it into instance of the button component-->
+      Submit
+      <span ngProjectAs="icon">-></span>
+    </button>
+  </p>
+</form>
+<!-- <form (ngSubmit)="onSubmit(titleInput.value, textInput.value)" #form>
+  <app-control label="Title">
+    <input name="title" id="title" #titleInput #input /> -->
+    <!-- #titleInput (template variable) , now this variable available anywhere in template-->
+  <!-- </app-control>
+  <app-control label="Request">
+    <textarea name="request" id="request" rows="3" #textInput #input></textarea>
+  </app-control>
+  <p>
+    <button appButton #btn> <!--when add attribute appButton , angular turns it into instance of the button component-->
+      <!-- Submit
+      <span ngProjectAs="icon">-></span>
+    </button>
+  </p>
+</form> --> -->
